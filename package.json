@@ -34,7 +34,12 @@
 		"ai",
 		"web-scraping",
 		"content-parser",
-		"grounding"
+		"fact-checking",
+		"content-verification",
+		"real-time-content",
+		"content-analysis",
+		"content-relevance",
+		"content-scoring"
 	],
 	"author": "Scott Spence",
 	"license": "MIT",
