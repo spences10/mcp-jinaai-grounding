@@ -90,7 +90,10 @@ class JinaGroundingServer {
 					{
 						name: 'ground_statement',
 						description:
-							'Ground a statement using real-time web search results to check factuality',
+							'Ground a statement using real-time web search results to check factuality. ' +
+							'When providing URLs via the references parameter, ensure they are publicly accessible ' +
+							'and contain relevant information about the statement. If the URLs do not contain ' +
+							'the necessary information, try removing the URL restrictions to search the entire web.',
 						inputSchema: {
 							type: 'object',
 							properties: {
@@ -104,7 +107,11 @@ class JinaGroundingServer {
 										type: 'string',
 									},
 									description:
-										'Optional list of URLs to restrict search to',
+										'Optional list of URLs to restrict search to. Only provide URLs that are ' +
+										'publicly accessible and contain information relevant to the statement. ' +
+										'If the URLs do not contain the necessary information, the grounding will fail. ' +
+										'For best results, either provide URLs you are certain contain the information, ' +
+										'or omit this parameter to search the entire web.',
 								},
 								no_cache: {
 									type: 'boolean',
@@ -177,7 +184,14 @@ class JinaGroundingServer {
 						if (error_json.status === 42206) {
 							throw new McpError(
 								ErrorCode.InvalidParams,
-								'The provided URLs did not contain relevant information for fact-checking. Try removing the URL restrictions or providing different URLs that contain information about the statement.',
+								'The provided URLs did not contain relevant information for fact-checking. This can happen when:\n' +
+								'1. The URLs are not publicly accessible\n' +
+								'2. The URLs do not contain information about the specific statement\n' +
+								'3. The information exists but is not in an easily searchable format\n\n' +
+								'Suggestions:\n' +
+								'- Remove the URL restrictions to search the entire web\n' +
+								'- Provide different URLs that you are certain contain the information\n' +
+								'- Verify the URLs are publicly accessible and contain relevant content',
 							);
 						}
 
