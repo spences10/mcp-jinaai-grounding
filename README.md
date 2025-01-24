@@ -5,6 +5,10 @@ Grounding API with LLMs. This server provides efficient and
 comprehensive web content grounding capabilities, optimized for
 enhancing LLM responses with factual, real-time web content.
 
+<a href="https://glama.ai/mcp/servers/urkuhet67l">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/urkuhet67l/badge" />
+</a>
+
 ## Features
 
 - 🌐 Advanced web content grounding through Jina.ai Grounding API
