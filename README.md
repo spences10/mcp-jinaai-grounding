@@ -1,4 +1,5 @@
 # mcp-jinaai-grounding
+[![smithery badge](https://smithery.ai/badge/@spences10/mcp-jinaai-grounding)](https://smithery.ai/server/@spences10/mcp-jinaai-grounding)
 
 A Model Context Protocol (MCP) server for integrating Jina.ai's
 Grounding API with LLMs. This server provides efficient and
