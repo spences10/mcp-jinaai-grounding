@@ -1,5 +1,17 @@
 # mcp-jinaai-grounding
 
+---
+
+## ⚠️ Notice
+
+**This repository is no longer maintained.**
+
+The functionality of this tool is now available in [mcp-omnisearch](https://github.com/spences10/mcp-omnisearch), which combines multiple MCP tools in one unified package.
+
+Please use [mcp-omnisearch](https://github.com/spences10/mcp-omnisearch) instead.
+
+---
+
 A Model Context Protocol (MCP) server for integrating Jina.ai's
 Grounding API with LLMs. This server provides efficient and
 comprehensive web content grounding capabilities, optimized for
